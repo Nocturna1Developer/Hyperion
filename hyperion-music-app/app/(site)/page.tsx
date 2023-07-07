@@ -61,7 +61,7 @@ export default async function Home() {
             <ListItem
               name="Liked Songs"
               image="/images/liked.png"
-              href="liked"
+              href="liked symphonies"
             /> {/* List item for 'Liked Songs' */}
           </div>
         </div>
@@ -69,7 +69,7 @@ export default async function Home() {
       <div className="mt-2 mb-7 px-6">
         <div className="flex justify-between items-center">
           <h1 className="text-white text-2xl font-semibold">
-            {'Newest songs'} {/* Title for the newest songs section */}
+            {'Explore the newest musical universes'} {/* Title for the newest songs section */}
           </h1>
         </div>
         <PageContent songs={songs} /> {/* Render the main content of the page with the fetched song data */}
