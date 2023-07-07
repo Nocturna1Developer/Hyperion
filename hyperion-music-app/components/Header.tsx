@@ -13,7 +13,6 @@ Details:
 - The component renders buttons for backward and forward navigation, home and search navigation for smaller screens, and authentication buttons (based on the current user's state).
 
 */
-
 "use client";
 
 import { twMerge } from "tailwind-merge";
@@ -50,9 +49,10 @@ const Header: React.FC<HeaderProps> = ({
     // Function to handle user logout
     const handleLogout = async () => {
         const { error } = await supabaseClient.auth.signOut();
-        player.reset();
-        router.refresh();
+        player.reset(); // Reset player state after logout
+        router.refresh(); // Refresh the page after logout
 
+        // Display error message in case of logout error
         if (error) {
             toast.error(error.message);
         }
@@ -64,13 +64,15 @@ const Header: React.FC<HeaderProps> = ({
             className={twMerge(`
         h-fit 
         bg-gradient-to-b 
-        from-emerald-800 
+        from-indigo-800 
         p-6
         `,
                 className
             )}>
+            {/* Navigation buttons (Back and Forward) for medium and larger screens */}
             <div className="w-full mb-4 flex items-center justify-between">
                 <div className="hidden md:flex gap-x-2 items-center">
+                    {/* Back navigation button */}
                     <button
                         onClick={() => router.back()}
                         className="
@@ -86,6 +88,7 @@ const Header: React.FC<HeaderProps> = ({
                     >
                         <RxCaretLeft className="text-white" size={35} />
                     </button>
+                    {/* Forward navigation button */}
                     <button
                         onClick={() => router.forward()}
                         className="
@@ -102,7 +105,9 @@ const Header: React.FC<HeaderProps> = ({
                         <RxCaretRight className="text-white" size={35} />
                     </button>
                 </div>
+                {/* Home and Search buttons for smaller screens */}
                 <div className="flex md:hidden gap-x-2 items-center">
+                    {/* Home button */}
                     <button
                         onClick={() => router.push('/')}
                         className="
@@ -119,6 +124,7 @@ const Header: React.FC<HeaderProps> = ({
                     >
                         <HiHome className="text-black" size={20} />
                     </button>
+                    {/* Search button */}
                     <button
                         onClick={() => router.push('/search')}
                         className="
@@ -136,15 +142,19 @@ const Header: React.FC<HeaderProps> = ({
                         <BiSearch className="text-black" size={20} />
                     </button>
                 </div>
+                {/* User authentication buttons */}
                 <div className="flex justify-between items-center gap-x-4">
                     {user ? (
+                        /* Logout and account buttons when user is logged in */
                         <div className="flex gap-x-4 items-center">
+                            {/* Logout button */}
                             <Button
                                 onClick={handleLogout}
                                 className="bg-white px-6 py-2"
                             >
                                 Logout
                             </Button>
+                            {/* Account button */}
                             <Button
                                 onClick={() => router.push('/account')}
                                 className="bg-white"
@@ -153,8 +163,10 @@ const Header: React.FC<HeaderProps> = ({
                             </Button>
                         </div>
                     ) : (
+                        /* Signup and Login buttons when no user is logged in */
                         <>
                             <div>
+                                {/* Sign up button */}
                                 <Button
                                     onClick={authModal.onOpen}
                                     className="
@@ -167,6 +179,7 @@ const Header: React.FC<HeaderProps> = ({
                                 </Button>
                             </div>
                             <div>
+                                {/* Login button */}
                                 <Button
                                     onClick={authModal.onOpen}
                                     className="bg-white px-6 py-2"
@@ -178,6 +191,7 @@ const Header: React.FC<HeaderProps> = ({
                     )}
                 </div>
             </div>
+            {/* Rendering child components */}
             {children}
         </div>
     );
