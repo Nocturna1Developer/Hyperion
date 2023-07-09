@@ -21,7 +21,7 @@ import ListItem from "@/components/ListItem"; // This component is used to displ
 
 import PageContent from "./components/PageContent"; // This component is used to display the main content of the page
 
-export const revalidate = 0; // Revalidation time for Next.js Incremental Static Regeneration
+export const revalidate = 0; // Revalidation time for Next.js Incremental Static Regeneration, data will always be up to date, not cached
 
 export default async function Home() {
   const songs = await getSongs(); // Fetch song data asynchronously
