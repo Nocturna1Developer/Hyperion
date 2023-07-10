@@ -1,3 +1,18 @@
+/*
+Liked.tsx:
+
+- This is a Next.js server-side rendered page component that displays the songs that the user has liked.
+- It uses a function 'getLikedSongs' to fetch all the songs that the currently authenticated user has liked.
+- The page displays a header with an image and title, and a 'LikedContent' component which displays the list of liked songs.
+
+Details:
+
+- 'getLikedSongs' is called in the server-side rendering function to fetch all the liked songs for the current user.
+- A 'Header' component is rendered at the top of the page with an image and a title that says 'Liked Songs'.
+- The 'LikedContent' component is rendered with the list of liked songs as a prop.
+- The 'revalidate' property is set to 0, which means the page will be regenerated on every request.
+*/
+
 import Image from "next/image";
 
 import getLikedSongs from "@/actions/getLikedSongs";
@@ -8,6 +23,7 @@ import LikedContent from "./components/LikedContent";
 export const revalidate = 0;
 
 const Liked = async () => {
+    // Fetch all the songs that the user has liked
     const songs = await getLikedSongs();
 
     return (
@@ -59,6 +75,7 @@ const Liked = async () => {
                     </div>
                 </div>
             </Header>
+            {/* Render the LikedContent component with the list of liked songs as a prop */}
             <LikedContent songs={songs} />
         </div>
     );
