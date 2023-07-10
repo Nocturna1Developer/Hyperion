@@ -15,6 +15,8 @@ Details:
 - A `twMerge` function is used to conditionally change the height of the component based on the `player.activeId` state.
 */
 
+"use client";
+
 import { HiHome } from "react-icons/hi";
 import { BiSearch } from "react-icons/bi";
 import { twMerge } from "tailwind-merge";
