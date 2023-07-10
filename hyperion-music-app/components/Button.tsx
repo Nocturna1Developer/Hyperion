@@ -36,7 +36,7 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(({
                 `
                 w-full 
                 rounded-full 
-                bg-green-500
+                bg-indigo-500
                 border
                 border-transparent
                 px-3 
@@ -57,7 +57,7 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(({
             ref={ref} // Forward the ref to the parent component
             {...props} // Spread additional props on the button
         >
-            {children} // Render the button content
+            {children}
         </button>
     );
 });

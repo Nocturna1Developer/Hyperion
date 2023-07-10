@@ -11,8 +11,8 @@ Details:
 - It uses various hooks like usePlayer(), useRouter(), useAuthModal() and useUser() to get the current user, player state, routing methods, and to handle opening the auth modal.
 - It defines a function 'handleLogout()' to handle user logout.
 - The component renders buttons for backward and forward navigation, home and search navigation for smaller screens, and authentication buttons (based on the current user's state).
-
 */
+
 "use client";
 
 import { twMerge } from "tailwind-merge";
@@ -62,11 +62,11 @@ const Header: React.FC<HeaderProps> = ({
     return (
         <div
             className={twMerge(`
-        h-fit 
-        bg-gradient-to-b 
-        from-indigo-800 
-        p-6
-        `,
+                h-fit 
+                bg-gradient-to-b 
+                from-indigo-800 
+                p-6
+                `,
                 className
             )}>
             {/* Navigation buttons (Back and Forward) for medium and larger screens */}
@@ -76,15 +76,15 @@ const Header: React.FC<HeaderProps> = ({
                     <button
                         onClick={() => router.back()}
                         className="
-              rounded-full 
-              bg-black 
-              flex 
-              items-center 
-              justify-center 
-              cursor-pointer 
-              hover:opacity-75 
-              transition
-            "
+                        rounded-full 
+                        bg-black 
+                        flex 
+                        items-center 
+                        justify-center 
+                        cursor-pointer 
+                        hover:opacity-75 
+                        transition
+                        "
                     >
                         <RxCaretLeft className="text-white" size={35} />
                     </button>
@@ -92,15 +92,15 @@ const Header: React.FC<HeaderProps> = ({
                     <button
                         onClick={() => router.forward()}
                         className="
-              rounded-full 
-              bg-black 
-              flex 
-              items-center 
-              justify-center 
-              cursor-pointer 
-              hover:opacity-75 
-              transition
-            "
+                        rounded-full 
+                        bg-black 
+                        flex 
+                        items-center 
+                        justify-center 
+                        cursor-pointer 
+                        hover:opacity-75 
+                        transition
+                        "
                     >
                         <RxCaretRight className="text-white" size={35} />
                     </button>
@@ -111,16 +111,16 @@ const Header: React.FC<HeaderProps> = ({
                     <button
                         onClick={() => router.push('/')}
                         className="
-              rounded-full 
-              p-2 
-              bg-white 
-              flex 
-              items-center 
-              justify-center 
-              cursor-pointer 
-              hover:opacity-75 
-              transition
-            "
+                        rounded-full 
+                        p-2 
+                        bg-white 
+                        flex 
+                        items-center 
+                        justify-center 
+                        cursor-pointer 
+                        hover:opacity-75 
+                        transition
+                        "
                     >
                         <HiHome className="text-black" size={20} />
                     </button>
@@ -128,16 +128,16 @@ const Header: React.FC<HeaderProps> = ({
                     <button
                         onClick={() => router.push('/search')}
                         className="
-              rounded-full 
-              p-2 
-              bg-white 
-              flex 
-              items-center 
-              justify-center 
-              cursor-pointer 
-              hover:opacity-75 
-              transition
-            "
+                        rounded-full 
+                        p-2 
+                        bg-white 
+                        flex 
+                        items-center 
+                        justify-center 
+                        cursor-pointer 
+                        hover:opacity-75 
+                        transition
+                        "
                     >
                         <BiSearch className="text-black" size={20} />
                     </button>
@@ -170,10 +170,10 @@ const Header: React.FC<HeaderProps> = ({
                                 <Button
                                     onClick={authModal.onOpen}
                                     className="
-                    bg-transparent 
-                    text-neutral-300 
-                    font-medium
-                  "
+                                    bg-transparent 
+                                    text-neutral-300 
+                                    font-medium
+                                    "
                                 >
                                     Sign up
                                 </Button>
@@ -191,7 +191,7 @@ const Header: React.FC<HeaderProps> = ({
                     )}
                 </div>
             </div>
-            {/* Rendering child components */}
+
             {children}
         </div>
     );

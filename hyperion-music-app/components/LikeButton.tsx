@@ -100,7 +100,7 @@ const LikeButton: React.FC<LikeButtonProps> = ({ songId }) => {
         }
 
         // Refresh the page to show the updated like state
-        router.refresh();
+        // router.refresh();
     };
 
     return (

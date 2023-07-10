@@ -22,7 +22,7 @@ const Loading = () => {
     // Return a Box component with the BounceLoader
     return (
         <Box className="h-full flex items-center justify-center">
-            <BounceLoader color="#22c55e" size={40} />
+            <BounceLoader color="#4B0082" size={40} />
         </Box>
     );
 }
