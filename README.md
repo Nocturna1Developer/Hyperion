@@ -40,7 +40,3 @@ Here's a breakdown of the development process:
 - **Stripe Integration**: Incorporating Stripe for handling premium subscriptions and recurring payments.
 - **Subscription Modal and Account Page**: Creating the subscription modal and account page for managing user subscriptions.
 - **Deployment**: Deploying the application.
-
-## License
-
-Distributed under the MIT License. See [LICENSE](LICENSE) for more information.
