@@ -25,31 +25,6 @@ This repository houses the codebase for a comprehensive Spotify clone, developed
 - **Authentication**: Supabase Auth, GitHub OAuth
 - **Payment Processing**: Stripe
 
-## Installation and Setup
-
-To run the project locally, follow these steps (you'll need Node.js and npm installed):
-
-1. Clone this repository and navigate into it
-
-    ```bash
-    git clone https://github.com/yourusername/full-stack-spotify-clone.git
-    cd full-stack-spotify-clone
-    ```
-
-2. Install the project dependencies
-
-    ```bash
-    npm install
-    ```
-
-3. Start the development server
-
-    ```bash
-    npm run dev
-    ```
-
-4. Open http://localhost:3000 in your browser to see the app running.
-
 ## Development Timeline
 
 Here's a breakdown of the development process:
@@ -65,10 +40,6 @@ Here's a breakdown of the development process:
 - **Stripe Integration**: Incorporating Stripe for handling premium subscriptions and recurring payments.
 - **Subscription Modal and Account Page**: Creating the subscription modal and account page for managing user subscriptions.
 - **Deployment**: Deploying the application.
-
-## Contribute
-
-Contributions are always welcome! Please read the [contribution guidelines](CONTRIBUTING.md) first.
 
 ## License
 
