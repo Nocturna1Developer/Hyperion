@@ -1,6 +1,7 @@
 # Hyperion
 
 ## Check out the project here: https://hyperion-rho.vercel.app/
+## Watch here: https://www.youtube.com/watch?v=PGCNf-_DkNI&feature=youtu.be
 
 #### Full Stack Spotify Clone
 
