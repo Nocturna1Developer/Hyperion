@@ -134,26 +134,39 @@ const SubscribeModal: React.FC<SubscribeModalProps> = ({
 
     return (
         <Modal
-            title="Only for premium users"
-            description={
-                <>
-                    Listen to music with Hyperion Gold Plan,
-                    <br />
-                    ***note: this is a test app and no money will be charged,
-                    <br />
-                    Stripe Test Card: 4242 4242 4242 4242
-                    <br />
-                    Stripe Test Expiry: 5/55 (anything in the future)
-                    <br />
-                    Stripe Test CVC: 555 (any 3 digit number)
-                </>
-            }
+            title="Only for hyperion golden users!"
+            description="this is a test app and no money will be charged, use card number:4242 4242 4242 4242, any future date, and CVC 555"
             isOpen={subscribeModal.isOpen}
             onChange={onChange}
         >
             {content}
         </Modal>
     );
+
+    // return (
+    //     <Modal
+    //         title="Only for hyperion golden users!"
+    //         description={
+    //             <>
+    //                 Listen to music with Hyperion Gold Plan,
+    //                 <br />
+    //                 ***note: this is a test app and no money will be charged,
+    //                 <br />
+    //                 Stripe Test Card: 4242 4242 4242 4242
+    //                 <br />
+    //                 Stripe Test Expiry: 5/55 (anything in the future)
+    //                 <br />
+    //                 Stripe Test CVC: 555 (any 3 digit number)
+    //             </>
+    //         }
+    //         isOpen={subscribeModal.isOpen}
+    //         onChange={onChange}
+    //     >
+    //         {content}
+    //     </Modal>
+    // );
+
+
 }
 
 export default SubscribeModal;
