@@ -135,7 +135,19 @@ const SubscribeModal: React.FC<SubscribeModalProps> = ({
     return (
         <Modal
             title="Only for premium users"
-            description="Listen to music with Hyperion Gold Plan"
+            description={
+                <>
+                    Listen to music with Hyperion Gold Plan,
+                    <br />
+                    ***note: this is a test app and no money will be charged,
+                    <br />
+                    Stripe Test Card: 4242 4242 4242 4242
+                    <br />
+                    Stripe Test Expiry: 5/55 (anything in the future)
+                    <br />
+                    Stripe Test CVC: 555 (any 3 digit number)
+                </>
+            }
             isOpen={subscribeModal.isOpen}
             onChange={onChange}
         >
